@@ -20,7 +20,7 @@ Experience
 ======
 * Research support activities, University of Padua, march-april 2021.
 	* Implementation in R of algorithms for classification and regression with advanced non parametric models.
-	Supervisor: prof. Bruno Scarpa.
+	Supervisor: Prof. Bruno Scarpa.
 
 
 * Academic tutor, University of Padua, 2019 - 2021.
@@ -33,5 +33,5 @@ Work experience
 
 Awards
 ======
- * Mille e una Lode Award 2018/2019, University of Paduas 
+ * Mille e una Lode Award 2018/2019, University of Padua
 
