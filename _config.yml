@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "FedeRica Stolf"
+title                    : "Federica Stolf"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -83,7 +83,7 @@ author:
   name             : "Federica Stolf"
   avatar           : "profile.png"
   bio              : "PhD student in Statistics @Unipd"
-  location         : "Location"
+  location         : "Padova, Italy"
   employer         :
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
  # googlescholar    : "http://yourfullgooglescholarurl.com"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/federica-stolf-50370519a"
   # orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
