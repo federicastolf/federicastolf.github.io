@@ -14,7 +14,7 @@ Education
 ======
 * PhD in Statistical Sciences, University of Padova, 2021 - ongoing
 * M.S. in Statistical Sciences, University of Padova, 2019 - 2021
-* B.S in Statistics for Technology and Sciences, University of Padova, 2016 - 2019
+* B.S. in Statistics for Technology and Sciences, University of Padova, 2016 - 2019
 
 Experience
 ======
