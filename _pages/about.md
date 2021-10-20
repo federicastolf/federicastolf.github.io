@@ -28,7 +28,7 @@ Experience
 
 Work experience
 ======
-* Internship as Data analyst at Horsa, Vicenza, 09/2019 - 12/2019
+* Internship as Data analyst at Horsa, Vicenza, 09/2019-12/2019
 
 
 Awards
