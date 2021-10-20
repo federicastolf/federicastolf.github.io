@@ -1,338 +1,212 @@
-# academic
+# Not Pure Poole <!-- omit in toc -->
 
-Academic is a [Jekyll](http://jekyllrb.com/) theme with a focus on simplicity, typography and flexibility.
-I originally designed it for my personal blog during my PhD thesis.
+<a href="https://jekyll-themes.com">
+  <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
 
-Check out my [personal website](https://gaalcaras.com) or my [blog](https://sociologs.com) to get a better feel for the Academic theme.
+**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
 
-![Academic screenshot](screenshot.png)
+> Poole explains that Jekyll has been asking for a particular chemical for days now but every time it has been fetched for him he rejects it as **not pure**. Poole also explains that he caught a glimpse of the man inside and he looked barely human.
+>
+> -- <a href="https://www.bbc.co.uk/bitesize/guides/zbtjnrd/revision/6"><cite>The death of Jekyll</cite></a>
 
-**Simplicity**: both in design and configuration, Academic aims to let the writer and its readers focus on the content.
-Almost all of the theme configuration happens in the `_config.yml` file.
+-----
 
-**Typography**: the goal of Academic is to let the author write very long and detailed posts, while being kind to its readers' eyes.
+See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-pure-poole/).
 
-**Flexibility**: Academic can be used to generate different layouts while keeping the same look and feel.
-All features require you to *opt in*, which means that you can either use a very lean `_config.yml` or a very detailed one if you want to use more features.
+![Screenshot](screenshot.png)
 
----
+## Table of Contents <!-- omit in toc -->
 
-Table of contents:
-
-
-* [Features](#features)
-* [Installation](#installation)
-* [Usage](#usage)
-	* [Change the brand color](#change-the-brand-color)
-	* [Setup your `_config.yml` file](#setup-your-_config-yml-file)
-		* [General settings](#general-settings)
-		* [Author](#author)
-		* [Navigation menu](#navigation-menu)
-		* [Multilingual and i18n support](#multilingual-and-i18n-support)
-		* [Plugins](#plugins)
-	* [Layouts](#layouts)
-		* [Post layout](#post-layout)
-		* [Page layout](#page-layout)
-		* [About layout](#about-layout)
-		* [Archive layout](#archive-layout)
-		* [404 layout](#404-layout)
-		* [Sitemap layout](#sitemap-layout)
-* [Contributing](#contributing)
-* [Release log](#release-log)
-* [License](#license)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Customizing Head](#customizing-head)
+  - [Creating Themes](#creating-themes)
+  - [Customizing Navigation](#customizing-navigation)
+  - [Customizing Cover Image](#customizing-cover-image)
+  - [Customizing Social Links](#customizing-social-links)
+  - [Enabling Posts Archive](#enabling-posts-archive)
+  - [Enabling TOC](#enabling-toc)
+  - [Enabling MathJax](#enabling-mathjax)
+  - [Something More](#something-more)
+- [Development](#development)
+- [License](#license)
 
 ## Features
 
-+ **Responsive design** on every page
-+ Designed with **typography best practices** (and my own tastes) in mind:
-    + Simple but elegant fonts, with modular scale
-    + High contrast colors and backgrounds as much as possible ([read more](http://contrastrebellion.com/), [and more](https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6))
-    + Comfortable line length (around 66 characters, [read more](http://webtypography.net/2.1.2))
-    + Attention to vertical rhythm, law of proximity and so on ([read more](http://typographyhandbook.com/))
-+ If you'd like a **multilingual** website, Academic has basic **i18n** support (no plugin required):
-    + *Supported languages* : English, French
-    + Lang selector to change languages automatically added in header and footer
-    + Basic SEO support for multilingual pages (sitemap and `<head>`)
-+ Posts layout allows you to:
-    + Add an **image thumbnail** and a **summary**
-    + Use mathematical notations with **MathJax** (loaded only on posts)
-    + **Tables and footnotes** styled by default (with the `redcarpet` markdown engine)
-    + Add your name and a shortbio at the end of each post
-+ Easily add a "call to action" (RSS feed, Twitter, etc.) at the end of each post and on your homepage
-+ **Add a Creative Commons license** to your website directly from your `_config.yml` file
-+ **Sitemap** and **404 page** layout
-+ Piwik tracking
-+ **About page** layout:
-    + Responsive two-columns layout
-    + Just fill out your usernames for Twitter, Github, LinkedIn, Keybase ; contact email or personal website ; link to your curriculum vitae.
-    + Academic automatically loads your Github profile picture.
-+ Choose between a **navigation menu** at the top or a **short pitch** for your blog
-+ Navigation menu:
-    + Hide pages from the navigation menu
-    + Add external links in the menu from the `_config.yml` file
+- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)
+- [Jekyll Feed](https://github.com/jekyll/jekyll-feed)
+- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+- [Jekyll Gist](https://github.com/jekyll/jekyll-gist)
+- [Google Analytics](https://analytics.google.com/)
+- [Disqus](https://disqus.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [MathJax](https://www.mathjax.org/)
+- Dark mode (enabled automatically via CSS media query)
+- Posts archive by dates, categories, and tags
+- Pagination, generated by [Jekyll Paginate](https://github.com/jekyll/jekyll-paginate)
+- TOC (generated by Vladimir "allejo" Jimenez's [jekyll-toc](https://github.com/allejo/jekyll-toc))
+- Related posts (time-based, because Jekyll) below each post
+- Mobile friendly design and development
+- Easily scalable text and component sizing with `rem` units in the CSS
+- Support for a wide gamut of HTML elements
+- Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
 
 ## Installation
 
-Add this line to your Jekyll site's Gemfile:
+You can choose one of the following methods to install Not Pure Poole:
 
-```ruby
-gem "academic"
-```
+- Directly specify the `not-pure-poole` gem.
 
-And add this line to your Jekyll site's `_config.yml`:
+    1. Add `gem 'not-pure-poole'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-```yaml
-theme: academic
-```
+        ```yml
+        plugins:
+          - not-pure-poole
+        ```
 
-And then execute:
+- If your site is hosted on GitHub Pages, you can use [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) to import the master branch of Not Pure Poole.
 
-```
-$ bundle
-```
+    1. Add `gem 'jekyll-remote-theme'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-Or install it yourself as:
+        ```yml
+        plugins:
+          - jekyll-remote-theme
 
-```
-$ gem install academic
-```
-
-Then add the `jekyll-data` plugin to your `Gemfile` ([see also](https://github.com/ashmaroli/jekyll-data#installation)):
-
-```ruby
-group :jekyll_plugins do
-  gem 'jekyll-data'
-end
-```
-
-I suggest you install and use `redcarpet` to generate your markdown ([read more](http://jekyllrb.com/docs/configuration/#redcarpet)).
+        remote_theme: vszhub/not-pure-poole
+        ```
 
 ## Usage
 
-### Change the brand color
+You can read this [example post](https://vszhub.github.io/not-pure-poole/2020/09/29/welcome-to-not-pure-poole/) to see the rendering result in this theme, and put the [source](_posts/2020-09-29-welcome-to-not-pure-poole.md) aside to learn some basic usages.
 
-Academic uses 4 shades of grey (very dark grey for the main content, ligther greys to lessen the emphasis on some elements) and a single "brand" color.
+### Configuration
 
-By default, the brand color is `#d33682` (purple). If it's not to your taste, you can easily change it by overriding the `$brand-color` variable in `/assets/styles.scss`.
+The [`_config.yml`](_config.yml) file in this repository already contains some variables, you can try to override them in your repository.
+
+### Customizing Head
+
+Not Pure Poole leaves a placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons. All you need to do is just creating a file `_includes/custom-head.html` and put data into it.
+
+### Creating Themes
+
+If you want to make your own color schemes, modify the CSS variables in the `_sass/_variables.scss` stylesheet with a scoped data attribute or class name.
+
+For example, below we've created the beginnings of a blue theme:
 
 ```scss
-$brand-color: red;
+// Example blue theme
+[data-theme="blue"] {
+  --body-bg: var(--blue);
+  --body-color: #fff;
+}
 ```
 
-### Setup your `_config.yml` file
+Then, apply the theme by adding `data-theme="blue"` to the `<html>` element.
 
-#### General settings
+### Customizing Navigation
 
-`title_html`: [optional] you can style the title of your website with html elements.
+You can create a file `_data/navigation.yml` to configure links to some pages. For example,
 
-Example:
-
-```html
-title_html: "<b>hello</b>world"
+```yml
+- title: Blog
+  url: /
+- title: About
+  url: /about/
 ```
 
-`pitch`: [optional] a small sentence or motto to quickly describe your blog. If no pitch is detected, Academic will fill the top bar with a navigation menu. If you want to display a short pitch in the top bar, Academic will put thput the navigation menu in the footer. Please note that `pitch` is only used in the top bar ; it is different from the `description` field (used in the footer and the meta tags for search engines).
+### Customizing Cover Image
 
-`description`: [recommended] short description for search engines. It's displayed in the footer of every page. Not to be confused with `pitch`.
+You can set your own cover image by modifying the `cover_image` variable in `_config.yml`, and you can also set different cover images on different pages by setting the `cover_image` variable on each page.
 
-`cc`: [optional] choose among the [Creative Commons](https://creativecommons.org/licenses/) licenses (v4). Accepted values are : `by`, `by-sa`, `by-nd`, `by-nc`, `by-nc-sa`, `by-nc-nd`. Defining the `cc` variable will add a small sentence in the footer. If no value is given, a small copyright is added instead.
+If you discover that the contrast between the cover text color and the cover background color is not enough, you can also adjust these two variables:
 
-`nb_posts_page`: [optional] number of posts to display on the homepage. By default, all posts are listed. Note that you should create a page with the archive layout.
-
-`archive_permalink`: [optional] permalink of the archive page. Set to `"/archive"` by default.
-
-`repo`: [optional] link to your website repo. If defined, it's added in the footer. Nothing is displayed otherwise.
-
-`piwik`: [optional]
-
-+ `url`: [mandatory] URL of your Piwik Instance without a trailing slash (like `mywebsite.com/piwik`)
-+ `site_id`: [mandatory] The ID of your website in your Piwik instance
-
-#### Author
-
-`email`: [optional] add email address in about layout.
-
-`curriculum`: [optional]
-
-+ `name`: [optional] text of the link. Default : Curriculum Vitae.
-+ `url`: [mandatory] url of the curriculum file.
-
-`shortbio`: [optional] describe yourself in a sentence or two. If `shortbio` is defined, a small element is added at the end of the post to introduce the author to the readers.
-
-`author_display`: [optional] if `true`, the author's name (and `author_website`) is added in the footer. `false` by default.
-
-`author_website`: [optional] url to the external website of the author. If `author_website` exists, it is added in the about layout and in the footer (if `author_display` is `true`).
-
-`twitter_username`: [optional] your Twitter username. If it exists, your account will be linked in the "call to action" boxes (homepage and posts), in the footer and on the about page.
-
-`github_username`: [optional] your Github username. If it exists, your account will be linked in the footer and on the about page.
-
-`keybase_username`: [optional] your Keybase username. If it exists, your account will be linked on the about page.
-
-`linkedin_username`: [optional] your LinkedIn username. If it exists, your account will be linked on the about page.
-
-#### Navigation menu
-
-`nav_ext_links`: [optional] you can choose to add external links in the top bar. Each item has two attributes:
-
-+ `name`: [mandatory] text for the link
-+ `url`: [mandatory] url
-
-Example:
-
-```yaml
-nav_ext_links:
-  - name: Link 1
-    url: http://jupiterbroadcasting.com/
-  - name: Link 2
-    url: http://wallabag.org/
+```yml
+cover_bg_color: rgb(40, 73, 77)
+cover_color: rgb(255, 255, 255)
 ```
 
-#### Multilingual and i18n support
+### Customizing Social Links
 
-Academic works perfectly well as a single language website.
-By default, Academic is in English.
-You can easily switch to another supported language :
+You can set your social links in `_data/social.yml`. You can custom titles, URLs, and icons (only support [Font Awesome](https://fontawesome.com/) currently), for example:
 
-```yaml
-langs: ["fr"]
+```yml
+- title: Email
+  url: mailto://vszhub@gmail.com
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/vszhub
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/vszhub/not-pure-poole
+  icon: fab fa-github
 ```
 
-If you need to translate part of your pages or posts, Academic also supports basic i18n and multilingual features.
+### Enabling Posts Archive
 
-To enable multilingual mode, just add the following to your `_config.yml`:
+Not Pure Poole supports posts archive by date, categories, and tags. For enabling that, you should put some data like below into `_data/archive.yml`:
 
-```yaml
-langs: ["fr", "en"]
-defaults:
-  - scope:
-      path: ""
-    values:
-      lang: "fr"
+```yml
+- type: dates
+  title: Dates
+  url: /dates/
+- type: categories
+  title: Categories
+  url: /categories/
+- type: tags
+  title: Tags
+  url: /tags/
 ```
 
-The `langs` variable should be an array containing your languages.
-Important: the first item should be your "default" language (ie the language that you translate posts from or/and that has the largest content available).
-The double quotes around the language *do* matter.
+After that, the navigation to these archive pages would be shown on the top of the homepage.
 
-Don't forget to define a default lang for your whole website.
+Then, you can create a category archive page, and set the below parameters on that page:
 
-If you want to translate some of the variables in your `_config.yml`, you can just do this:
-
-```yaml
-title:
-  fr: "Nom du site en Français"
-  en: "English name of the website"
-```
-
-Translating posts and pages is very easy.
-Let's say my default lang is `fr` and I want to translate `_posts/billet-au-hasard.md` to English.
-
-```yaml
+```yml
 ---
-layout: post
-title:  "Billet au hasard"
-permalink: /fr/billet-au-hasard/
-date:   2017-02-14 15:32:29 +0100
+layout: archive-taxonomies
+type: categories
 ---
 ```
 
-First, I'll create a new file named `_posts/billet-au-hasard.en.md`.
-Both files have to share the *exact same name before the first extension* (`.md` or `.en.md`) in order to signal to Academic that these posts are translations of eachother.
+Or a tag archive page:
 
-Then, in `_posts/billet-au-hasard.en.md`, add the lang and change the permalink in your frontmatter:
-
-```yaml
-layout: post
-title: "Random post"
-permalink: /en/random-post
-date:   2017-02-14 15:32:29 +0100
-lang: en
+```yml
+layout: archive-taxonomies
+type: tags
 ```
 
-That's it!
-Academic will handle the lang selector and will add `<link />` to the `<head>` section to improve SEO.
+Or archive by dates:
 
-Note that you have to handle the permalinks manually.
-I recommend that you use the subdirectory `/lang/` naming convention everywhere, as exemplified above.
-You should at least take care of your homepage URL.
-
-If you'd like Academic to support more languages, please contribute by adding the appropriate translations in `/_data/i18n_academic.yml`.
-
-#### Plugins
-
-Academic is compatible with the `jekyll-last-modified-at` plugin ([repo](https://github.com/gjtorikian/jekyll-last-modified-at)). If installed, the last modified date will be (discretely) displayed in the posts lists and in the post layout.
-
-If you specified a Github `repo`, the last modified date will point to the revision history of the file.
-
-### Layouts
-
-#### Post layout
-
-In the yaml header, you can add some tags to help Academic.
-
-`summary`: [optional] a short text or abstract. Used in the posts lists and on the post page.
-
-`thumbnail`: [optional] relative path to image or absolute url to an image that describes your post. Used in the posts lists and on the post page.
-
-#### Page layout
-
-In the yaml header, you can add some tags to help Academic.
-
-`invisible`: [optional] if `true`, then this page will not be listed in the navigation menu.
-
-#### About layout
-
-Will automatically put the content of the page on the right column. The left column will automatically be filled with the author info provided in the `_config.yml`.
-
-#### Archive layout
-
-Create a `archive.md` page, choose the "archive" layout. You don't need to write anything in this file, all posts published will be listed in reverse chronological order.
-
-#### 404 layout
-
-Create a `404.md` page, set the layout:
-
-```
-layout: pagenotfound
+```yml
+layout: archive-dates
 ```
 
-The content of the page will be used in the 404 page.
+### Enabling TOC
 
-#### Sitemap layout
+If you want to show the TOC of a page on the right side, just set `toc: true` on that page.
 
-Create a `sitemap.xml` page, set the layout:
+### Enabling MathJax
 
-```
-layout: sitemap
-```
+If you want to write mathematics on a page, just set `math: true` on that page to enable MathJax.
 
-You now have a sitemap you can feed to the search engines.
+### Something More
 
-### Includes
+Just **hack** into the code and see what you can get.
 
-Sometimes you need to use figures and images in your posts, with detailed captions and maybe even the source of the image.
-The `image.html` allows you to do just that without all the HTML markup.
+## Development
 
-```
-{% include image.html src="/assets/img/zotero-archives-numeriques/screencast.gif"
-                      caption="Notre solution en action" 
-                      desc="Screencast de capture Zotero"
-                      source="Google"
-                      href="http://google.com"%}
-```
+To set up your environment to develop this theme, run `bundle install`.
 
-## Contributing
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/gaalcaras/academic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Release log
-
-+ 0.1.3 [2016-12]: design refinements (page and about layouts)
-+ 0.1.2 [2016-12]: bug fixes (footer, assets and gemfile cleaning) + `repo` var
-+ 0.1.1 [2016-12]: bug fixes (404 page layout, footer, posts list)
-+ 0.1.0 [2016-12]: first release of the theme.
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `not-pure-poole.gemspec` accordingly.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
